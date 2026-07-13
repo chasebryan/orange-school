@@ -1,0 +1,3354 @@
+{
+  "schema_version": 1,
+  "curriculum_version": "0.9.0-dev",
+  "title": "Orange School: zero to professional",
+  "repository_url": "https://github.com/chasebryan/orange-school",
+  "entry_module": "ori-001",
+  "module_pass_percent": 80,
+  "host_validation_envelope": {
+    "claim": "Course tooling compatibility only; this is not an Orange supported-host claim.",
+    "python_minimum": "3.11",
+    "bash_minimum": "5.1",
+    "git_minimum": "2.39",
+    "c_standard": "C17",
+    "rust_toolchain": "1.96.1",
+    "network_required_for_checks": false
+  },
+  "orange_source": {
+    "repository_url": "https://github.com/chasebryan/orange",
+    "revision": "ee0fa66d3d38af5e8e10adaa67555b1f0cebc6f6",
+    "revision_context": "Canonical merged main revision closing the accepted pre-alpha S3a evidence; this is not an Orange release.",
+    "language_edition": "2026",
+    "implemented_stages": [
+      "S1",
+      "S2"
+    ],
+    "active_stages": [
+      "S3"
+    ],
+    "implemented_slices": [
+      "S3a"
+    ],
+    "pending_stages": [
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+    ],
+    "sources": [
+      {
+        "id": "project-charter",
+        "path": "docs/PROJECT_CHARTER.md",
+        "status": "directed"
+      },
+      {
+        "id": "roadmap",
+        "path": "docs/ROADMAP.md",
+        "status": "directed"
+      },
+      {
+        "id": "language-2026",
+        "path": "docs/LANGUAGE_2026.md",
+        "status": "normative"
+      },
+      {
+        "id": "semantics-2026",
+        "path": "docs/SEMANTICS_2026.md",
+        "status": "normative"
+      },
+      {
+        "id": "decisions",
+        "path": "docs/DECISIONS.md",
+        "status": "directed"
+      },
+      {
+        "id": "oep-0003",
+        "path": "docs/governance/oeps/OEP-0003-orange-2026-typed-literals.md",
+        "status": "normative"
+      },
+      {
+        "id": "architecture",
+        "path": "docs/ARCHITECTURE.md",
+        "status": "proposed"
+      },
+      {
+        "id": "user-journeys",
+        "path": "docs/USER_JOURNEYS.md",
+        "status": "proposed"
+      },
+      {
+        "id": "compiler-readme",
+        "path": "compiler/README.md",
+        "status": "implemented"
+      }
+    ]
+  },
+  "statuses": {
+    "released": "Complete learner material exists and passes all release gates.",
+    "planned": "Graph position and competency intent exist, but learner material is not released.",
+    "blocked": "Release is forbidden until every named blocker is resolved."
+  },
+  "source_maturities": {
+    "general": "Prerequisite knowledge that makes no Orange feature claim.",
+    "implemented": "Behavior exists and is tested at the pinned Orange revision.",
+    "ratified": "Normatively decided but not implemented at the pinned revision.",
+    "proposed": "Directional Orange design that may change."
+  },
+  "roles": [
+    {
+      "id": "P-01",
+      "name": "Cryptographic implementer"
+    },
+    {
+      "id": "P-02",
+      "name": "Verification engineer"
+    },
+    {
+      "id": "P-03",
+      "name": "Cryptographer or standards author"
+    },
+    {
+      "id": "P-04",
+      "name": "Library maintainer or integrator"
+    },
+    {
+      "id": "P-05",
+      "name": "Auditor or downstream consumer"
+    }
+  ],
+  "journeys": [
+    {
+      "id": "J-01",
+      "name": "Install and initialize an exact toolchain",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-02",
+      "name": "Import a standard and author a specification",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-03",
+      "name": "Implement, prove, and classify claims",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-04",
+      "name": "Build and inspect native artifacts",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-05",
+      "name": "Integrate through generated foreign interfaces",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-06",
+      "name": "Audit and replay evidence offline",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-07",
+      "name": "Update, deprecate, withdraw, or replace a profile",
+      "source_status": "proposed"
+    },
+    {
+      "id": "J-08",
+      "name": "Respond to a vulnerability or invalidated claim",
+      "source_status": "proposed"
+    }
+  ],
+  "stages": [
+    {
+      "id": "orientation",
+      "order": 0,
+      "title": "Orientation"
+    },
+    {
+      "id": "computing",
+      "order": 1,
+      "title": "Computing practice"
+    },
+    {
+      "id": "programming",
+      "order": 2,
+      "title": "Programming foundations"
+    },
+    {
+      "id": "mathematics",
+      "order": 3,
+      "title": "Mathematical foundations"
+    },
+    {
+      "id": "cryptography",
+      "order": 4,
+      "title": "Cryptography foundations"
+    },
+    {
+      "id": "systems",
+      "order": 5,
+      "title": "Systems foundations"
+    },
+    {
+      "id": "languages",
+      "order": 6,
+      "title": "Languages and compilers"
+    },
+    {
+      "id": "formal-methods",
+      "order": 7,
+      "title": "Formal methods"
+    },
+    {
+      "id": "assurance",
+      "order": 8,
+      "title": "Assurance engineering"
+    },
+    {
+      "id": "orange-today",
+      "order": 9,
+      "title": "Orange Today"
+    },
+    {
+      "id": "orange-professional",
+      "order": 10,
+      "title": "Orange professional core"
+    },
+    {
+      "id": "specializations",
+      "order": 11,
+      "title": "Professional specializations"
+    }
+  ],
+  "competencies": [
+    {
+      "id": "CMP-01",
+      "domain": "computing",
+      "description": "Use terminals, files, processes, and exact commands safely and reproducibly."
+    },
+    {
+      "id": "CMP-02",
+      "domain": "computing",
+      "description": "Use version control, tests, debugging, and CI to investigate and communicate changes."
+    },
+    {
+      "id": "PRG-01",
+      "domain": "programming",
+      "description": "Design programs with functions, control flow, data, and explicit state."
+    },
+    {
+      "id": "PRG-02",
+      "domain": "programming",
+      "description": "Use types, explicit errors, tests, and debugging to build reliable software."
+    },
+    {
+      "id": "PRG-03",
+      "domain": "programming",
+      "description": "Select and analyze data structures and algorithms using resource bounds."
+    },
+    {
+      "id": "PRG-04",
+      "domain": "programming",
+      "description": "Read and write the C and Rust needed for systems and foreign-interface work."
+    },
+    {
+      "id": "MAT-01",
+      "domain": "mathematics",
+      "description": "Use logic, definitions, induction, contradiction, and constructive proof techniques."
+    },
+    {
+      "id": "MAT-02",
+      "domain": "mathematics",
+      "description": "Reason about number theory, modular arithmetic, algebraic structures, and finite fields."
+    },
+    {
+      "id": "MAT-03",
+      "domain": "mathematics",
+      "description": "Model discrete probability, randomness, expectation, and statistical evidence."
+    },
+    {
+      "id": "CRY-01",
+      "domain": "cryptography",
+      "description": "State cryptographic goals, attacker models, assumptions, and security notions."
+    },
+    {
+      "id": "CRY-02",
+      "domain": "cryptography",
+      "description": "Analyze primitives, constructions, protocols, failure behavior, and misuse resistance."
+    },
+    {
+      "id": "CRY-03",
+      "domain": "cryptography",
+      "description": "Trace standards, errata, parameters, provenance, and canonical test vectors."
+    },
+    {
+      "id": "SYS-01",
+      "domain": "systems",
+      "description": "Reason about representation, fixed-width arithmetic, layout, memory, and ownership."
+    },
+    {
+      "id": "SYS-02",
+      "domain": "systems",
+      "description": "Inspect object files, calling conventions, ABIs, targets, SIMD, linking, and dispatch."
+    },
+    {
+      "id": "SYS-03",
+      "domain": "systems",
+      "description": "Define leakage models and assess constant-time and side-channel evidence honestly."
+    },
+    {
+      "id": "PLT-01",
+      "domain": "languages",
+      "description": "Explain lexing, parsing, syntax trees, recovery, diagnostics, and resource bounds."
+    },
+    {
+      "id": "PLT-02",
+      "domain": "languages",
+      "description": "Reason with operational semantics, name resolution, type systems, and effects."
+    },
+    {
+      "id": "PLT-03",
+      "domain": "languages",
+      "description": "Trace compiler IRs, lowering, optimization, code generation, and preservation evidence."
+    },
+    {
+      "id": "FRM-01",
+      "domain": "formal-methods",
+      "description": "Use specifications, contracts, invariants, termination arguments, and refinement."
+    },
+    {
+      "id": "FRM-02",
+      "domain": "formal-methods",
+      "description": "Distinguish proof checking from proof search and inspect terms, certificates, axioms, and automation."
+    },
+    {
+      "id": "FRM-03",
+      "domain": "formal-methods",
+      "description": "Model probabilistic games, adversary interfaces, reductions, and cryptographic assumptions."
+    },
+    {
+      "id": "ASS-01",
+      "domain": "assurance",
+      "description": "Write scoped claims and enumerate evidence bases, assumptions, exclusions, and trusted computing bases."
+    },
+    {
+      "id": "ASS-02",
+      "domain": "assurance",
+      "description": "Design positive, negative, differential, fuzz, mutation, and adversarial tests."
+    },
+    {
+      "id": "ASS-03",
+      "domain": "assurance",
+      "description": "Build deterministic, content-addressed, inspectable, offline-replayable evidence."
+    },
+    {
+      "id": "ASS-04",
+      "domain": "assurance",
+      "description": "Operate support, updates, deprecation, revocation, and vulnerability response without claim drift."
+    },
+    {
+      "id": "ORG-01",
+      "domain": "orange",
+      "description": "Install, identify, and use an exact supported Orange toolchain without overstating its capability."
+    },
+    {
+      "id": "ORG-02",
+      "domain": "orange",
+      "description": "Predict and inspect Orange 2026 lexical behavior and stable lexical diagnostics."
+    },
+    {
+      "id": "ORG-03",
+      "domain": "orange",
+      "description": "Author and test the complete implemented Orange 2026 grammar and conformance boundary."
+    },
+    {
+      "id": "ORG-04",
+      "domain": "orange",
+      "description": "Import an exact standard and author an admitted Orange specification."
+    },
+    {
+      "id": "ORG-05",
+      "domain": "orange",
+      "description": "Implement a specification, discharge obligations, and classify each Orange claim independently."
+    },
+    {
+      "id": "ORG-06",
+      "domain": "orange",
+      "description": "Build and inspect a supported Orange native artifact and its preservation chain."
+    },
+    {
+      "id": "ORG-07",
+      "domain": "orange",
+      "description": "Integrate an Orange artifact through generated C and Rust interfaces and validate boundary failures."
+    },
+    {
+      "id": "ORG-08",
+      "domain": "orange",
+      "description": "Audit hostile evidence input and replay an Orange claim bundle offline."
+    },
+    {
+      "id": "ORG-09",
+      "domain": "orange",
+      "description": "Update, migrate, deprecate, withdraw, or replace an Orange profile with traceable claim impact."
+    },
+    {
+      "id": "ORG-10",
+      "domain": "orange",
+      "description": "Contain and remediate a vulnerability or invalidated Orange claim."
+    },
+    {
+      "id": "ROLE-01",
+      "domain": "specialization",
+      "description": "Independently deliver and defend cryptographic implementation evidence as P-01."
+    },
+    {
+      "id": "ROLE-02",
+      "domain": "specialization",
+      "description": "Independently deliver and defend proof and trust-closure evidence as P-02."
+    },
+    {
+      "id": "ROLE-03",
+      "domain": "specialization",
+      "description": "Independently deliver and defend standards-to-specification evidence as P-03."
+    },
+    {
+      "id": "ROLE-04",
+      "domain": "specialization",
+      "description": "Independently deliver and defend integration and lifecycle evidence as P-04."
+    },
+    {
+      "id": "ROLE-05",
+      "domain": "specialization",
+      "description": "Independently deliver and defend offline audit evidence as P-05."
+    }
+  ],
+  "modules": [
+    {
+      "id": "ori-001",
+      "title": "Start here: evidence, status, and your path",
+      "stage": "orientation",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [],
+      "estimated_hours": 1,
+      "summary": "Learn how Orange School works, classify evidence honestly, and choose a placement path.",
+      "outcomes": [
+        {
+          "id": "ORI-001-01",
+          "text": "Distinguish released, planned, and blocked curriculum material."
+        },
+        {
+          "id": "ORI-001-02",
+          "text": "Classify a test, proof, assumption, and proposal without strengthening its claim."
+        },
+        {
+          "id": "ORI-001-03",
+          "text": "Produce a personal path that begins at the earliest unpassed assessment."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ASS-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/ori-001",
+      "examples": []
+    },
+    {
+      "id": "cmp-101",
+      "title": "Terminal, files, and repeatable commands",
+      "stage": "computing",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "ori-001"
+      ],
+      "estimated_hours": 3,
+      "summary": "Navigate a filesystem, run bounded commands, read exit status, and record reproducible evidence.",
+      "outcomes": [
+        {
+          "id": "CMP-101-01",
+          "text": "Navigate and inspect a workspace without relying on a graphical file browser."
+        },
+        {
+          "id": "CMP-101-02",
+          "text": "Run a command, separate standard output from diagnostics, and interpret its exit status."
+        },
+        {
+          "id": "CMP-101-03",
+          "text": "Write a reproducible command record with working directory, inputs, command, and observed result."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CMP-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/cmp-101",
+      "examples": [],
+      "host_checks": [
+        {
+          "id": "cmp-101-lab-smoke",
+          "path": "curriculum/modules/cmp-101/checks/lab_smoke.sh",
+          "runner": "bash"
+        }
+      ]
+    },
+    {
+      "id": "cmp-102",
+      "title": "Git and reproducible change history",
+      "stage": "computing",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cmp-101"
+      ],
+      "estimated_hours": 6,
+      "summary": "Use commits, branches, diffs, and exact revisions as evidence.",
+      "outcomes": [
+        {
+          "id": "CMP-102-01",
+          "text": "Inspect a repository's exact HEAD, worktree status, and diff without changing it."
+        },
+        {
+          "id": "CMP-102-02",
+          "text": "Create focused Git history in a fresh temporary repository."
+        },
+        {
+          "id": "CMP-102-03",
+          "text": "Produce a reproducible evidence record tied to an exact revision and diff."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CMP-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/cmp-102",
+      "host_checks": [
+        {
+          "id": "cmp-102-lab-smoke",
+          "path": "curriculum/modules/cmp-102/checks/lab_smoke.sh",
+          "runner": "bash"
+        }
+      ]
+    },
+    {
+      "id": "cmp-103",
+      "title": "Tests, debugging, automation, and CI",
+      "stage": "computing",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cmp-102"
+      ],
+      "estimated_hours": 8,
+      "summary": "Reproduce failures, isolate causes, automate checks, and read CI evidence.",
+      "outcomes": [
+        {
+          "id": "CMP-103-01",
+          "text": "Reproduce a failure and isolate the smallest input or condition that triggers it."
+        },
+        {
+          "id": "CMP-103-02",
+          "text": "Design and run tests with unambiguous pass or fail exit behavior."
+        },
+        {
+          "id": "CMP-103-03",
+          "text": "Interpret a CI check record without extending its result beyond the tested scope."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CMP-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/cmp-103",
+      "host_checks": [
+        {
+          "id": "cmp-103-lab-smoke",
+          "path": "curriculum/modules/cmp-103/checks/lab_smoke.sh",
+          "runner": "bash"
+        }
+      ]
+    },
+    {
+      "id": "prg-101",
+      "title": "Programming from first principles",
+      "stage": "programming",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cmp-101"
+      ],
+      "estimated_hours": 24,
+      "summary": "Build programs from expressions, functions, control, data, and explicit state.",
+      "outcomes": [
+        {
+          "id": "PRG-101-01",
+          "text": "Trace expressions, variables, functions, and control flow for a concrete input."
+        },
+        {
+          "id": "PRG-101-02",
+          "text": "Write a Python program with explicit input, output, and state."
+        },
+        {
+          "id": "PRG-101-03",
+          "text": "Decompose a problem and test normal, boundary, and invalid cases."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PRG-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/prg-101",
+      "host_checks": [
+        {
+          "id": "prg-101-lab-smoke",
+          "path": "curriculum/modules/prg-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "prg-102",
+      "title": "Data structures, algorithms, and bounds",
+      "stage": "programming",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "prg-101"
+      ],
+      "estimated_hours": 24,
+      "summary": "Choose representations and reason about time, space, and bounded work.",
+      "outcomes": [
+        {
+          "id": "PRG-102-01",
+          "text": "Choose and justify list, tuple, dictionary, and set representations."
+        },
+        {
+          "id": "PRG-102-02",
+          "text": "Implement and test search, count, deduplication, and ordering algorithms."
+        },
+        {
+          "id": "PRG-102-03",
+          "text": "State and enforce time, space, and input bounds for an algorithm."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PRG-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/prg-102",
+      "host_checks": [
+        {
+          "id": "prg-102-lab-smoke",
+          "path": "curriculum/modules/prg-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "prg-103",
+      "title": "Types, errors, tests, and debugging",
+      "stage": "programming",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "prg-101",
+        "cmp-103"
+      ],
+      "estimated_hours": 18,
+      "summary": "Make failures explicit and build evidence that code handles them.",
+      "outcomes": [
+        {
+          "id": "PRG-103-01",
+          "text": "Use type annotations and explicit invariants to define accepted inputs and outputs."
+        },
+        {
+          "id": "PRG-103-02",
+          "text": "Turn a reproduced failure into a focused unit test and diagnose it systematically."
+        },
+        {
+          "id": "PRG-103-03",
+          "text": "Design explicit error results that fail closed without hiding context."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PRG-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/prg-103",
+      "host_checks": [
+        {
+          "id": "prg-103-lab-smoke",
+          "path": "curriculum/modules/prg-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "prg-104",
+      "title": "C and Rust systems bridge",
+      "stage": "programming",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "prg-102",
+        "prg-103"
+      ],
+      "estimated_hours": 36,
+      "summary": "Use C and Rust ownership, build, test, and unsafe-boundary concepts needed for Orange integration.",
+      "outcomes": [
+        {
+          "id": "PRG-104-01",
+          "text": "Compare C memory, pointer, and bounds contracts with Rust ownership and borrowing using concrete traces."
+        },
+        {
+          "id": "PRG-104-02",
+          "text": "Build and test bounded C and Rust functions with explicit success and error behavior."
+        },
+        {
+          "id": "PRG-104-03",
+          "text": "Integrate one C function through a narrow Rust FFI wrapper and document every unsafe assumption."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PRG-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/prg-104",
+      "host_checks": [
+        {
+          "id": "prg-104-lab-smoke",
+          "path": "curriculum/modules/prg-104/checks/lab_smoke.sh",
+          "runner": "bash"
+        }
+      ]
+    },
+    {
+      "id": "mat-101",
+      "title": "Logic and proof techniques",
+      "stage": "mathematics",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "ori-001"
+      ],
+      "estimated_hours": 24,
+      "summary": "Read and construct precise definitions, propositions, proofs, and counterexamples.",
+      "outcomes": [
+        {
+          "id": "MAT-101-01",
+          "text": "Translate precise statements among prose, predicates, quantifiers, truth cases, and counterexamples."
+        },
+        {
+          "id": "MAT-101-02",
+          "text": "Construct direct, contrapositive, contradiction, and induction arguments."
+        },
+        {
+          "id": "MAT-101-03",
+          "text": "Distinguish proof from finite testing and enumerate assumptions and scope."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "MAT-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/mat-101",
+      "host_checks": [
+        {
+          "id": "mat-101-lab-smoke",
+          "path": "curriculum/modules/mat-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "mat-102",
+      "title": "Number theory and algebra",
+      "stage": "mathematics",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "mat-101"
+      ],
+      "estimated_hours": 32,
+      "summary": "Develop the discrete structures underlying modern cryptography.",
+      "outcomes": [
+        {
+          "id": "MAT-102-01",
+          "text": "Compute and justify gcd, extended Euclid, divisibility, and congruence results."
+        },
+        {
+          "id": "MAT-102-02",
+          "text": "Analyze closure, identity, inverse, and operation laws in groups, rings, and fields without overclaiming."
+        },
+        {
+          "id": "MAT-102-03",
+          "text": "Implement and test bounded modular algorithms while separating computation from proof."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "MAT-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/mat-102",
+      "host_checks": [
+        {
+          "id": "mat-102-lab-smoke",
+          "path": "curriculum/modules/mat-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "mat-103",
+      "title": "Modular arithmetic and finite fields",
+      "stage": "mathematics",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "mat-102",
+        "prg-101"
+      ],
+      "estimated_hours": 28,
+      "summary": "Compute and prove properties of modular and finite-field operations.",
+      "outcomes": [
+        {
+          "id": "MAT-103-01",
+          "text": "Compute and justify modular reduction, inverses, exponentiation, and finite-prime-field operations."
+        },
+        {
+          "id": "MAT-103-02",
+          "text": "Implement a bounded prime-field value type with explicit modulus and input invariants and tests."
+        },
+        {
+          "id": "MAT-103-03",
+          "text": "Use counterexamples to distinguish a prime field from arithmetic modulo a composite and separate tests from proof."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "MAT-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/mat-103",
+      "host_checks": [
+        {
+          "id": "mat-103-lab-smoke",
+          "path": "curriculum/modules/mat-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "mat-104",
+      "title": "Discrete probability and statistical evidence",
+      "stage": "mathematics",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "mat-101",
+        "prg-101"
+      ],
+      "estimated_hours": 28,
+      "summary": "Reason about random experiments, distributions, bounds, and empirical inference.",
+      "outcomes": [
+        {
+          "id": "MAT-104-01",
+          "text": "Model finite sample spaces, events, conditional probability, and independence."
+        },
+        {
+          "id": "MAT-104-02",
+          "text": "Compute expectation plus exact union, collision, and tail bounds for bounded cases."
+        },
+        {
+          "id": "MAT-104-03",
+          "text": "Implement exact enumeration and a reproducible simulation, then state sampling, error, and pseudorandom limitations."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "MAT-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/mat-104",
+      "host_checks": [
+        {
+          "id": "mat-104-lab-smoke",
+          "path": "curriculum/modules/mat-104/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "cry-101",
+      "title": "Cryptographic goals and attacker models",
+      "stage": "cryptography",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "mat-101",
+        "prg-101"
+      ],
+      "estimated_hours": 20,
+      "summary": "Define security goals, capabilities, assumptions, and failure boundaries.",
+      "outcomes": [
+        {
+          "id": "CRY-101-01",
+          "text": "State an asset-specific cryptographic goal, attacker model, and security-game-style notion with explicit capabilities, resources, exclusions, success event, and evidence limits."
+        },
+        {
+          "id": "CRY-101-02",
+          "text": "Distinguish keys, nonces, and security randomness while documenting assumptions, trust boundaries, lifetimes, scopes, and failure responses."
+        },
+        {
+          "id": "CRY-101-03",
+          "text": "Analyze how cryptographic claims compose with encoding, state, key management, and application behavior, then use a bounded evaluator without mistaking structural completeness for security."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CRY-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/cry-101",
+      "host_checks": [
+        {
+          "id": "cry-101-lab-smoke",
+          "path": "curriculum/modules/cry-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "cry-102",
+      "title": "Symmetric cryptography, hashes, MACs, KDFs, and AEAD",
+      "stage": "cryptography",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cry-101",
+        "mat-103"
+      ],
+      "estimated_hours": 36,
+      "summary": "Analyze construction goals, composition rules, misuse, and failure behavior.",
+      "outcomes": [
+        {
+          "id": "CRY-102-01",
+          "text": "Distinguish symmetric encryption, an unkeyed hash, a MAC, a password KDF, a general key-derivation function, and AEAD by security goal, input contract, output, and limitation."
+        },
+        {
+          "id": "CRY-102-02",
+          "text": "Analyze nonce uniqueness, tag verification, AAD, domain separation, key separation, and composition rules, including the consequence of violating each invariant."
+        },
+        {
+          "id": "CRY-102-03",
+          "text": "Use bounded Python 3.11 library mechanics for SHA-256, HMAC-SHA-256, and PBKDF2-HMAC-SHA-256 without presenting the exercise as encryption or production key handling."
+        },
+        {
+          "id": "CRY-102-04",
+          "text": "Specify and audit a versioned cryptographic manifest, then identify what still requires a maintained production library, deployment authority, and operational review."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CRY-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/cry-102",
+      "host_checks": [
+        {
+          "id": "cry-102-lab-smoke",
+          "path": "curriculum/modules/cry-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "cry-103",
+      "title": "Public-key cryptography, signatures, and key establishment",
+      "stage": "cryptography",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cry-101",
+        "mat-103",
+        "mat-104"
+      ],
+      "estimated_hours": 40,
+      "summary": "Analyze asymmetric primitives, assumptions, protocols, and attack surfaces.",
+      "outcomes": [
+        {
+          "id": "CRY-103-01",
+          "text": "Distinguish public-key encryption, digital signatures, and key establishment by operation, security goal, attacker capability, and non-goal."
+        },
+        {
+          "id": "CRY-103-02",
+          "text": "Analyze parameter and key validation, randomness and nonce requirements, public-key authenticity, transcript and context binding, and externally observable failure behavior."
+        },
+        {
+          "id": "CRY-103-03",
+          "text": "Design and evaluate a KEM-style composition and a classical-to-post-quantum migration boundary using ratified profiles, explicit PKI assumptions, and failure-safe evidence rather than home-grown production cryptography."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CRY-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/cry-103",
+      "host_checks": [
+        {
+          "id": "cry-103-lab-smoke",
+          "path": "curriculum/modules/cry-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "cry-104",
+      "title": "Standards, errata, provenance, and vectors",
+      "stage": "cryptography",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cry-102",
+        "cry-103",
+        "cmp-102"
+      ],
+      "estimated_hours": 24,
+      "summary": "Turn exact standards sources into traceable requirements and test evidence.",
+      "outcomes": [
+        {
+          "id": "CRY-104-01",
+          "text": "Classify a standards source, its exact version and status, normative language, updates, and errata, then extract atomic requirements with stable locations."
+        },
+        {
+          "id": "CRY-104-02",
+          "text": "Preserve standards and vector provenance with bounded manifests, content digests, review context, and explicit authenticity limits."
+        },
+        {
+          "id": "CRY-104-03",
+          "text": "Execute positive and negative vectors reproducibly, retain failure evidence, and scope claims to what the vectors actually establish."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "CRY-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-02"
+      ],
+      "roles": [
+        "P-01",
+        "P-03",
+        "P-05"
+      ],
+      "material": "curriculum/modules/cry-104",
+      "host_checks": [
+        {
+          "id": "cry-104-lab-smoke",
+          "path": "curriculum/modules/cry-104/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "sys-101",
+      "title": "Representation, arithmetic, and resource bounds",
+      "stage": "systems",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "prg-102"
+      ],
+      "estimated_hours": 24,
+      "summary": "Connect bits and bytes to explicit integer behavior and bounded computation.",
+      "outcomes": [
+        {
+          "id": "SYS-101-01",
+          "text": "Distinguish mathematical integers from fixed-width unsigned and two's-complement representations, including bits, bytes, hexadecimal, and endian order."
+        },
+        {
+          "id": "SYS-101-02",
+          "text": "Select and justify checked, wrapping, or saturating arithmetic plus bounded shifts and conversions at representation boundaries."
+        },
+        {
+          "id": "SYS-101-03",
+          "text": "Encode and parse a bounded binary record with validated length/offset arithmetic and explicit input, time, and memory budgets."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "SYS-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/sys-101",
+      "host_checks": [
+        {
+          "id": "sys-101-lab-smoke",
+          "path": "curriculum/modules/sys-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "sys-102",
+      "title": "Memory, ownership, regions, and zeroization",
+      "stage": "systems",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "prg-104",
+        "sys-101"
+      ],
+      "estimated_hours": 28,
+      "summary": "Reason about allocation, aliasing, lifetime, mutation, and secret erasure.",
+      "outcomes": [
+        {
+          "id": "SYS-102-01",
+          "text": "Trace C object lifetime, storage duration, allocation, and deallocation, and identify accesses or releases whose behavior is undefined."
+        },
+        {
+          "id": "SYS-102-02",
+          "text": "Apply Rust ownership, moves, shared and exclusive borrows, slices, aliasing rules, and pointer-provenance obligations to concrete memory regions."
+        },
+        {
+          "id": "SYS-102-03",
+          "text": "Specify and implement one bounded C-to-Rust ownership transfer with a narrow safe wrapper and a complete unsafe-assumption ledger."
+        },
+        {
+          "id": "SYS-102-04",
+          "text": "Produce and evaluate zeroization and destruction evidence without claiming that one wipe proves every copy or physical representation was erased."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "SYS-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/sys-102",
+      "host_checks": [
+        {
+          "id": "sys-102-lab-smoke",
+          "path": "curriculum/modules/sys-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "sys-103",
+      "title": "Objects, linking, calling conventions, and ABIs",
+      "stage": "systems",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "sys-102"
+      ],
+      "estimated_hours": 28,
+      "summary": "Inspect native object and foreign-call boundaries down to symbols and layout.",
+      "outcomes": [
+        {
+          "id": "SYS-103-01",
+          "text": "Trace C17 translation units through relocatable objects, archives, linking, and executable loading; inspect sections, symbols, and relocations while distinguishing C linkage from toolchain visibility."
+        },
+        {
+          "id": "SYS-103-02",
+          "text": "Specify and measure a target-scoped C/Rust ABI contract for calling convention, exact-width values, field order, size, alignment, padding, and offsets without promoting an observation to a language guarantee."
+        },
+        {
+          "id": "SYS-103-03",
+          "text": "Design a narrow FFI boundary with explicit pointer, ownership, lifetime, aliasing, mutation, retention, status, output, panic, and unwind rules and a fail-closed safe Rust wrapper."
+        },
+        {
+          "id": "SYS-103-04",
+          "text": "Produce reproducible, target-specific artifact evidence with capability-detected tools and positive, endpoint, invalid, and deliberate link-failure observations."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "SYS-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/sys-103",
+      "host_checks": [
+        {
+          "id": "sys-103-lab-smoke",
+          "path": "curriculum/modules/sys-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "sys-104",
+      "title": "Targets, SIMD, and feature dispatch",
+      "stage": "systems",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "sys-101",
+        "sys-103"
+      ],
+      "estimated_hours": 24,
+      "summary": "Connect target models and vector operations to exact supported artifact tuples.",
+      "outcomes": [
+        {
+          "id": "SYS-104-01",
+          "text": "Specify an artifact tuple that distinguishes target triple, ISA, ABI, operating system, object format, endianness, and pointer width, and separate language guarantees from build and inspection observations."
+        },
+        {
+          "id": "SYS-104-02",
+          "text": "Explain SIMD lane width, lane type, per-lane semantics, alignment, tails, and reductions without inferring semantics from vector width or assuming source notation guarantees vector instructions."
+        },
+        {
+          "id": "SYS-104-03",
+          "text": "Design a baseline-plus-accelerated dispatch policy that requires an included implementation and runtime capability evidence before entry, and that never executes an unsupported instruction."
+        },
+        {
+          "id": "SYS-104-04",
+          "text": "Build and inspect reproducible native and cross-target evidence, maintain a capability matrix, and scope every conclusion to the exact compiler, flags, target, and artifact hash observed."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "SYS-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/sys-104",
+      "host_checks": [
+        {
+          "id": "sys-104-lab-smoke",
+          "path": "curriculum/modules/sys-104/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "sys-105",
+      "title": "Leakage models and side-channel engineering",
+      "stage": "systems",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "sys-104",
+        "cry-102",
+        "mat-104"
+      ],
+      "estimated_hours": 32,
+      "summary": "Separate source discipline, formal leakage claims, artifact inspection, and empirical timing evidence.",
+      "outcomes": [
+        {
+          "id": "SYS-105-01",
+          "text": "Write an explicit leakage model that identifies the system, adversary, sensitive and public inputs, permitted declassification, observations, target, and claim scope."
+        },
+        {
+          "id": "SYS-105-02",
+          "text": "Apply source-level control-flow and memory-access discipline, then inspect exact compiled artifacts while accounting for compiler, optimizer, linker, runtime, and microarchitectural effects."
+        },
+        {
+          "id": "SYS-105-03",
+          "text": "Design a bounded leakage experiment with calibration controls, randomized acquisition, raw effect sizes, Welch-style statistics, confounder handling, and an explicit multiple-testing plan."
+        },
+        {
+          "id": "SYS-105-04",
+          "text": "Calibrate conclusions from source review, artifact inspection, tests, and timing samples, explaining why each is evidence rather than proof of non-leakage or constant-time behavior."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "SYS-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/sys-105",
+      "host_checks": [
+        {
+          "id": "sys-105-lab-smoke",
+          "path": "curriculum/modules/sys-105/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "plt-101",
+      "title": "Lexers, parsers, syntax trees, and diagnostics",
+      "stage": "languages",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "prg-102"
+      ],
+      "estimated_hours": 24,
+      "summary": "Build and test deterministic, bounded language frontends.",
+      "outcomes": [
+        {
+          "id": "PLT-101-01",
+          "text": "Define a byte, Unicode, and source-position policy and build a deterministic bounded lexer with structured diagnostics."
+        },
+        {
+          "id": "PLT-101-02",
+          "text": "Specify a grammar and precedence, construct a bounded parser, and distinguish concrete syntax from an abstract syntax tree."
+        },
+        {
+          "id": "PLT-101-03",
+          "text": "Test valid, endpoint, and invalid inputs, limited recovery, diagnostic stability, and resource claims with differential, metamorphic, and deliberate-failure evidence."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PLT-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/plt-101",
+      "host_checks": [
+        {
+          "id": "plt-101-lab-smoke",
+          "path": "curriculum/modules/plt-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "plt-102",
+      "title": "Semantics, names, types, and effects",
+      "stage": "languages",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "plt-101",
+        "mat-101"
+      ],
+      "estimated_hours": 36,
+      "summary": "Define what programs mean and which invalid behaviors are rejected.",
+      "outcomes": [
+        {
+          "id": "PLT-102-01",
+          "text": "Define lexical name resolution, binding, and shadowing over a bounded immutable abstract syntax tree."
+        },
+        {
+          "id": "PLT-102-02",
+          "text": "Derive static type-and-effect judgments that reject invalid programs before evaluation and conservatively describe potential effects."
+        },
+        {
+          "id": "PLT-102-03",
+          "text": "Specify and execute deterministic call-by-value operational semantics with explicit evaluation order, values, effects, and resource failures."
+        },
+        {
+          "id": "PLT-102-04",
+          "text": "Test static and dynamic semantics with derivations, endpoints, relational cases, independent oracles, and observed deliberate failures while keeping claims within the model."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PLT-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/plt-102",
+      "host_checks": [
+        {
+          "id": "plt-102-lab-smoke",
+          "path": "curriculum/modules/plt-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "plt-103",
+      "title": "IRs, lowering, code generation, and preservation",
+      "stage": "languages",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "plt-102",
+        "sys-101"
+      ],
+      "estimated_hours": 36,
+      "summary": "Trace meaning and evidence through a compiler pipeline to artifact bytes.",
+      "outcomes": [
+        {
+          "id": "PLT-103-01",
+          "text": "Specify a typed IR and lower a bounded source AST while preserving explicit scope, type, single-assignment, and resource invariants."
+        },
+        {
+          "id": "PLT-103-02",
+          "text": "Validate, serialize, decode, and execute a deterministic bounded artifact with use-before-definition and exact-layout checks."
+        },
+        {
+          "id": "PLT-103-03",
+          "text": "Establish scoped source-versus-IR equivalence evidence across normal, endpoint, one-beyond, invalid, metamorphic, and deliberate-failure cases without overstating proof or Orange capability."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PLT-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/plt-103",
+      "host_checks": [
+        {
+          "id": "plt-103-lab-smoke",
+          "path": "curriculum/modules/plt-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "frm-101",
+      "title": "Specifications, contracts, invariants, and refinement",
+      "stage": "formal-methods",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "plt-102",
+        "mat-101"
+      ],
+      "estimated_hours": 36,
+      "summary": "State and prove local obligations connecting intent to implementation behavior.",
+      "outcomes": [
+        {
+          "id": "FRM-101-01",
+          "text": "Write bounded specifications with explicit assumptions, preconditions, postconditions, old-state references, and structured counterexamples."
+        },
+        {
+          "id": "FRM-101-02",
+          "text": "Distinguish partial from total correctness and check loop initialization, invariant preservation, exit reasoning, and a decreasing nonnegative variant."
+        },
+        {
+          "id": "FRM-101-03",
+          "text": "Check finite behavioral refinement by preventing stronger concrete input requirements and requiring concrete results to satisfy the abstract postcondition."
+        },
+        {
+          "id": "FRM-101-04",
+          "text": "Produce reproducible executable evidence at every exact resource endpoint and smallest constructible overflow while stating what finite checking does not prove."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "FRM-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/frm-101",
+      "host_checks": [
+        {
+          "id": "frm-101-lab-smoke",
+          "path": "curriculum/modules/frm-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "frm-102",
+      "title": "Proof assistants, kernels, and trust",
+      "stage": "formal-methods",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "frm-101"
+      ],
+      "estimated_hours": 36,
+      "summary": "Construct and replay proof objects while tracking axioms and the trusted checker.",
+      "outcomes": [
+        {
+          "id": "FRM-102-01",
+          "text": "Distinguish propositions, judgments, assumptions, axioms, proof terms, certificates, proof construction, and deterministic replay."
+        },
+        {
+          "id": "FRM-102-02",
+          "text": "Implement and audit a small trusted kernel whose inference rules, integrity checks, diagnostics, and resource bounds are explicit."
+        },
+        {
+          "id": "FRM-102-03",
+          "text": "Inventory the trusted computing base and axiom dependencies, then calibrate soundness and theorem claims to the actual evidence."
+        },
+        {
+          "id": "FRM-102-04",
+          "text": "Validate proof certificates with rule, endpoint, malformed, replay, mutation, deliberate-failure, and recovery evidence."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "FRM-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/frm-102",
+      "host_checks": [
+        {
+          "id": "frm-102-lab-smoke",
+          "path": "curriculum/modules/frm-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "frm-103",
+      "title": "SAT, SMT, automation, and certificates",
+      "stage": "formal-methods",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "frm-102",
+        "prg-102"
+      ],
+      "estimated_hours": 28,
+      "summary": "Use automated search without confusing solver output with checked proof evidence.",
+      "outcomes": [
+        {
+          "id": "FRM-103-01",
+          "text": "Distinguish automated search from independent result checking and interpret sat, unsat, and unknown without strengthening an unknown result."
+        },
+        {
+          "id": "FRM-103-02",
+          "text": "Validate bounded CNF inputs, SAT model witnesses, and UNSAT split-tree certificates with stable fail-closed diagnostics."
+        },
+        {
+          "id": "FRM-103-03",
+          "text": "Enforce explicit search and certificate bounds, then preserve deterministic endpoint, malformed-certificate, deliberate-failure, and restored-pass evidence."
+        },
+        {
+          "id": "FRM-103-04",
+          "text": "Inventory solver and checker trust, and state only the conditional claims supported by checked certificates."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "FRM-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/frm-103",
+      "host_checks": [
+        {
+          "id": "frm-103-lab-smoke",
+          "path": "curriculum/modules/frm-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "frm-104",
+      "title": "Probabilistic games and reductions",
+      "stage": "formal-methods",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "frm-101",
+        "mat-104",
+        "cry-101"
+      ],
+      "estimated_hours": 32,
+      "summary": "Express game hops, adversaries, advantages, assumptions, and reduction boundaries.",
+      "outcomes": [
+        {
+          "id": "FRM-104-01",
+          "text": "Specify a bounded probabilistic security game with challenger, adversary, randomness, interfaces, transcript, win event, baseline, advantage, resource bounds, and quantifier order."
+        },
+        {
+          "id": "FRM-104-02",
+          "text": "Construct reviewable game hops and reductions whose assumptions, bad events, loss terms, and concrete bounds are explicit and directionally valid."
+        },
+        {
+          "id": "FRM-104-03",
+          "text": "Distinguish proof from exact finite enumeration and seeded simulation, then produce boundary, relational, deliberate-failure, and reproducibility evidence with calibrated claims."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "FRM-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/frm-104",
+      "host_checks": [
+        {
+          "id": "frm-104-lab-smoke",
+          "path": "curriculum/modules/frm-104/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "ass-101",
+      "title": "Claims, evidence, assumptions, and trusted bases",
+      "stage": "assurance",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "cry-104",
+        "frm-101",
+        "cmp-103"
+      ],
+      "estimated_hours": 24,
+      "summary": "Produce claim records that say exactly what evidence supports and excludes.",
+      "outcomes": [
+        {
+          "id": "ASS-101-01",
+          "text": "Write versioned claim records with an exact subject, scope, exclusions, assumptions, and falsifiable language rather than an unbounded quality label."
+        },
+        {
+          "id": "ASS-101-02",
+          "text": "Classify test, analysis, formal, inspection, and provenance evidence; give it a canonical content identity; and state the narrow conclusion and non-proofs of each evidence type."
+        },
+        {
+          "id": "ASS-101-03",
+          "text": "Compute claim-dependency, assumption, evidence, and trusted computing base closure while detecting missing references, excessive depth, cycles, and invalid composition arguments."
+        },
+        {
+          "id": "ASS-101-04",
+          "text": "Derive deterministic fail-closed claim statuses and produce a calibrated, offline-replayable report with exact endpoints, deliberate failures, and residual-risk statements."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ASS-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/ass-101",
+      "host_checks": [
+        {
+          "id": "ass-101-lab-smoke",
+          "path": "curriculum/modules/ass-101/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "ass-102",
+      "title": "Adversarial validation",
+      "stage": "assurance",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "ass-101",
+        "prg-103"
+      ],
+      "estimated_hours": 28,
+      "summary": "Design tests that try to falsify parsers, implementations, proofs, policies, and artifacts.",
+      "outcomes": [
+        {
+          "id": "ASS-102-01",
+          "text": "Turn scoped threat hypotheses into bounded structured, malformed, endpoint, and mutated cases with explicit lineage and canonical corpus identity."
+        },
+        {
+          "id": "ASS-102-02",
+          "text": "Apply independent oracles, properties, metamorphic relations, and differential comparisons across parsers, implementations, proof or certificate checkers, policies, and artifacts."
+        },
+        {
+          "id": "ASS-102-03",
+          "text": "Use implementation mutation and deterministic counterexample minimization to challenge a suite while preserving failures and restored passes without overstating coverage."
+        },
+        {
+          "id": "ASS-102-04",
+          "text": "Report exact resource endpoints, exercised hypotheses, uncovered space, oracle and coverage limits, trust dependencies, residual risks, and calibrated assurance claims."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ASS-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [],
+      "material": "curriculum/modules/ass-102",
+      "host_checks": [
+        {
+          "id": "ass-102-lab-smoke",
+          "path": "curriculum/modules/ass-102/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "ass-103",
+      "title": "Reproducibility, supply chains, and offline replay",
+      "stage": "assurance",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "ass-101",
+        "sys-103",
+        "cmp-103"
+      ],
+      "estimated_hours": 28,
+      "summary": "Bind evidence to exact content and replay it without undeclared network trust.",
+      "outcomes": [
+        {
+          "id": "ASS-103-01",
+          "text": "Design a canonical manifest binding subject, sequence, materials, dependency closure, provenance identities, environment, TCB, recipe, and expected result."
+        },
+        {
+          "id": "ASS-103-02",
+          "text": "Validate hostile bounded replay bundles before material retention and safely isolate verified writes."
+        },
+        {
+          "id": "ASS-103-03",
+          "text": "Replay authenticated dependency closure offline and detect substitution, omission, addition, rollback, provenance/TCB drift, and deterministic-output mismatch."
+        },
+        {
+          "id": "ASS-103-04",
+          "text": "Produce reproducible, failure-sensitive evidence with exact identities, endpoints, environment/TCB observations, residual risks, and narrow non-claims."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ASS-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-06"
+      ],
+      "roles": [
+        "P-04",
+        "P-05"
+      ],
+      "material": "curriculum/modules/ass-103",
+      "host_checks": [
+        {
+          "id": "ass-103-lab-smoke",
+          "path": "curriculum/modules/ass-103/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "ass-104",
+      "title": "Release lifecycle and vulnerability response",
+      "stage": "assurance",
+      "status": "released",
+      "source_maturity": "general",
+      "prerequisites": [
+        "ass-102",
+        "ass-103"
+      ],
+      "estimated_hours": 24,
+      "summary": "Operate updates, withdrawals, incident containment, correction, and downstream communication.",
+      "outcomes": [
+        {
+          "id": "ASS-104-01",
+          "text": "Define a versioned release lifecycle with explicit artifact identity, compatibility and support policy, update and migration rules, rollback prevention, retirement, revocation, and withdrawal behavior."
+        },
+        {
+          "id": "ASS-104-02",
+          "text": "Operate a vulnerability response from bounded intake and triage through claim invalidation, containment, advisory, update or withdrawal, downstream notification, closure, and recovery."
+        },
+        {
+          "id": "ASS-104-03",
+          "text": "Preserve canonical timelines and failure-sensitive evidence, exercise exact endpoints and illegal transitions, and run deterministic recovery drills whose results can be replayed offline."
+        },
+        {
+          "id": "ASS-104-04",
+          "text": "Inventory the lifecycle trust boundary and state only claims supported by local records, distinguishing referenced actions from verified external execution and excluding unsupported Orange or production claims."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ASS-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05"
+      ],
+      "material": "curriculum/modules/ass-104",
+      "host_checks": [
+        {
+          "id": "ass-104-lab-smoke",
+          "path": "curriculum/modules/ass-104/checks/lab_smoke.py",
+          "runner": "python"
+        }
+      ]
+    },
+    {
+      "id": "org-101",
+      "title": "Pin and run Orange Today",
+      "stage": "orange-today",
+      "status": "released",
+      "source_maturity": "implemented",
+      "prerequisites": [
+        "cmp-101"
+      ],
+      "estimated_hours": 2,
+      "summary": "Identify the exact merged compiler revision, run the current CLI, and report the bounded S3a result without calling it compilation or proof.",
+      "outcomes": [
+        {
+          "id": "ORG-101-01",
+          "text": "Verify the Orange repository revision and pinned Rust toolchain."
+        },
+        {
+          "id": "ORG-101-02",
+          "text": "Run orangec check on a valid Orange 2026 source and interpret the silent success."
+        },
+        {
+          "id": "ORG-101-03",
+          "text": "State at least four capabilities that the current check result does not establish."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ORG-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-01"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "semantics-2026",
+        "oep-0003",
+        "compiler-readme"
+      ],
+      "material": "curriculum/modules/org-101",
+      "examples": [
+        {
+          "id": "org-101-minimal",
+          "path": "curriculum/modules/org-101/examples/minimal.or",
+          "mode": "check-pass"
+        }
+      ]
+    },
+    {
+      "id": "org-102",
+      "title": "Orange 2026 lexical model",
+      "stage": "orange-today",
+      "status": "released",
+      "source_maturity": "implemented",
+      "prerequisites": [
+        "org-101"
+      ],
+      "estimated_hours": 5,
+      "summary": "Predict tokens, trivia, spans, limits, and lexical failures for the implemented edition.",
+      "outcomes": [
+        {
+          "id": "ORG-102-01",
+          "text": "Classify Orange 2026 identifiers, reserved words, integers, strings, comments, punctuation, and whitespace."
+        },
+        {
+          "id": "ORG-102-02",
+          "text": "Use orangec lex to inspect deterministic tokens and byte spans."
+        },
+        {
+          "id": "ORG-102-03",
+          "text": "Predict a lexical rejection and identify its stable diagnostic code."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ORG-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "PLT-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "language-2026",
+        "semantics-2026",
+        "compiler-readme"
+      ],
+      "material": "curriculum/modules/org-102",
+      "examples": [
+        {
+          "id": "org-102-tokens",
+          "path": "curriculum/modules/org-102/examples/tokens.or",
+          "mode": "lex-pass",
+          "stdout_file": "curriculum/modules/org-102/examples/tokens.stdout"
+        },
+        {
+          "id": "org-102-unexpected-character",
+          "path": "curriculum/modules/org-102/examples/unexpected-character.or",
+          "mode": "lex-fail",
+          "stderr_contains": "ORC0001"
+        }
+      ]
+    },
+    {
+      "id": "org-103",
+      "title": "Orange 2026 grammar, diagnostics, and conformance",
+      "stage": "orange-today",
+      "status": "released",
+      "source_maturity": "implemented",
+      "prerequisites": [
+        "org-102"
+      ],
+      "estimated_hours": 6,
+      "summary": "Author every currently accepted syntactic form and falsify acceptance at grammar boundaries.",
+      "outcomes": [
+        {
+          "id": "ORG-103-01",
+          "text": "Write the complete current Orange 2026 grammar from its production rules."
+        },
+        {
+          "id": "ORG-103-02",
+          "text": "Create accepted and rejected source cases that distinguish lexical, syntactic, and S3a semantic boundaries."
+        },
+        {
+          "id": "ORG-103-03",
+          "text": "Scope recovered parse evidence separately from full check success and exclude unsupported execution, proof, compilation, and cryptographic claims."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "ORG-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ASS-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "language-2026",
+        "semantics-2026",
+        "oep-0003",
+        "compiler-readme"
+      ],
+      "material": "curriculum/modules/org-103",
+      "examples": [
+        {
+          "id": "org-103-functions",
+          "path": "curriculum/modules/org-103/examples/functions.or",
+          "mode": "check-pass"
+        },
+        {
+          "id": "org-103-reserved-declaration",
+          "path": "curriculum/modules/org-103/examples/reserved-declaration.or",
+          "mode": "check-fail",
+          "stderr_contains": "ORC0103"
+        },
+        {
+          "id": "org-103-trailing-syntax",
+          "path": "curriculum/modules/org-103/examples/trailing-syntax.or",
+          "mode": "check-fail",
+          "stderr_contains": "ORC0104"
+        }
+      ]
+    },
+    {
+      "id": "org-201",
+      "title": "Orange S3a typed literals and reference evaluation",
+      "stage": "orange-professional",
+      "status": "released",
+      "source_maturity": "implemented",
+      "prerequisites": [
+        "org-103",
+        "plt-102",
+        "mat-103",
+        "prg-104"
+      ],
+      "estimated_hours": 12,
+      "summary": "Check closed Int and Word[8] specification literals and interpret source-ordered reference values at the exact accepted pre-alpha S3a revision.",
+      "outcomes": [
+        {
+          "id": "ORG-201-01",
+          "text": "Distinguish the separate spec and impl declaration namespaces, same-kind uniqueness, and the absence of a relation between same-spelled declarations."
+        },
+        {
+          "id": "ORG-201-02",
+          "text": "Check closed typed specification literals against the exact Int and Word[8] normalization, range, and diagnostic rules."
+        },
+        {
+          "id": "ORG-201-03",
+          "text": "Interpret the source-ordered noncanonical Typed Reference Core and predict exact orangec eval values."
+        },
+        {
+          "id": "ORG-201-04",
+          "text": "Record pinned check and eval evidence without promoting it into unsupported language, proof, compilation, security, or release claims."
+        }
+      ],
+      "competencies": [
+        {
+          "id": "PLT-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ASS-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03"
+      ],
+      "source_refs": [
+        "language-2026",
+        "semantics-2026",
+        "oep-0003",
+        "compiler-readme",
+        "roadmap"
+      ],
+      "material": "curriculum/modules/org-201",
+      "examples": [
+        {
+          "id": "org-201-typed-values-check",
+          "path": "curriculum/modules/org-201/examples/typed-values.or",
+          "mode": "check-pass"
+        },
+        {
+          "id": "org-201-typed-values-eval",
+          "path": "curriculum/modules/org-201/examples/typed-values.or",
+          "mode": "eval-pass",
+          "stdout_file": "curriculum/modules/org-201/examples/typed-values.stdout"
+        },
+        {
+          "id": "org-201-duplicate-spec",
+          "path": "curriculum/modules/org-201/examples/duplicate-spec.or",
+          "mode": "check-fail",
+          "stderr_contains": "ORC0201"
+        },
+        {
+          "id": "org-201-negative-word",
+          "path": "curriculum/modules/org-201/examples/negative-word.or",
+          "mode": "check-fail",
+          "stderr_contains": "ORC0206"
+        },
+        {
+          "id": "org-201-eval-no-partial",
+          "path": "curriculum/modules/org-201/examples/eval-no-partial.or",
+          "mode": "eval-fail",
+          "stderr_contains": "ORC0207"
+        }
+      ]
+    },
+    {
+      "id": "org-202",
+      "title": "Orange specifications and implementations",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-201",
+        "sys-102",
+        "frm-101",
+        "cry-104"
+      ],
+      "estimated_hours": 36,
+      "summary": "Author real specification and implementation bodies with contracts once the language defines them.",
+      "blocked_by": [
+        "S3a defines only closed typed specification literals; parameters, operators, calls, bindings, control flow, dynamic failure, typed implementations, contracts, effects, and specification/implementation refinement remain undefined or unimplemented."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "FRM-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-02",
+        "J-03"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03"
+      ],
+      "source_refs": [
+        "project-charter",
+        "roadmap",
+        "language-2026",
+        "semantics-2026",
+        "oep-0003",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "org-301",
+      "title": "Orange proofs, obligations, and claim matrices",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-202",
+        "frm-103",
+        "ass-101"
+      ],
+      "estimated_hours": 40,
+      "summary": "Discharge separate proof obligations and classify mixed claims once S4 exists.",
+      "blocked_by": [
+        "S3a's internal Typed Reference Core has no canonical encoding, proof identity, refinement relation, or proof-checking role; D-006 and Orange S4 remain pending."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-05",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "FRM-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ASS-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-03"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "decisions",
+        "semantics-2026",
+        "oep-0003",
+        "architecture",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "org-302",
+      "title": "Orange games, secrecy, and leakage claims",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-301",
+        "frm-104",
+        "sys-105"
+      ],
+      "estimated_hours": 40,
+      "summary": "Connect games, reductions, information flow, and exact leakage models once defined.",
+      "blocked_by": [
+        "Orange defines no game, proof, effect, leakage, target, or constant-time semantics; S4 and S6 remain pending."
+      ],
+      "competencies": [
+        {
+          "id": "FRM-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "SYS-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-03"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "decisions",
+        "semantics-2026",
+        "oep-0003",
+        "architecture",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "org-401",
+      "title": "Orange compiler and native artifact path",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-202",
+        "plt-103",
+        "sys-104"
+      ],
+      "estimated_hours": 40,
+      "summary": "Build, inspect, and falsify assurance-preserving native artifact chains once implemented.",
+      "blocked_by": [
+        "S3a has no lowering or target meaning; S5 and S6 provide no compiler IR, preservation relation, code generation, object path, or admitted target."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-06",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "PLT-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-04"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "decisions",
+        "semantics-2026",
+        "oep-0003",
+        "architecture",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "org-402",
+      "title": "Orange C and Rust integration",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-401",
+        "sys-103",
+        "prg-104"
+      ],
+      "estimated_hours": 32,
+      "summary": "Generate, integrate, and attack-test foreign interfaces once Orange exposes an ABI.",
+      "blocked_by": [
+        "S6 provides no layout, ownership or buffer, ABI, foreign-boundary, generated C or Rust, or supported target-tuple contract."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-07",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-05"
+      ],
+      "roles": [
+        "P-01",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "decisions",
+        "architecture",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "org-403",
+      "title": "Orange packages, evidence bundles, and offline replay",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-301",
+        "org-401",
+        "ass-103"
+      ],
+      "estimated_hours": 36,
+      "summary": "Assemble and replay hostile-input evidence bundles once package and release surfaces exist.",
+      "blocked_by": [
+        "Orange has no S7 admitted cryptography corpus and no S8 manifest, lock, package, evidence-bundle, or offline-replay format or implementation."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-08",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ASS-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-06"
+      ],
+      "roles": [
+        "P-02",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "architecture",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "org-404",
+      "title": "Orange update, withdrawal, and incident operations",
+      "stage": "orange-professional",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-402",
+        "org-403",
+        "ass-104"
+      ],
+      "estimated_hours": 32,
+      "summary": "Exercise profile updates, withdrawals, claim invalidation, and vulnerability response on real Orange releases.",
+      "blocked_by": [
+        "The exact pin is a pre-alpha compiler slice, not a release; S8 provides no supported release, update, withdrawal, support-window, or incident-operation surface."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-09",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-10",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ASS-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "roadmap",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "pro-100",
+      "title": "Shared Orange professional studio",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "org-302",
+        "org-404"
+      ],
+      "estimated_hours": 60,
+      "summary": "Complete the common standards-to-artifact-to-evidence workflow before specializing.",
+      "blocked_by": [
+        "The shared studio requires runnable J-01 through J-08 Orange surfaces; S3 is incomplete and S4 through S8 are absent at the exact merged pre-alpha pin."
+      ],
+      "competencies": [
+        {
+          "id": "ORG-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-05",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-06",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-07",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-08",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-09",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        },
+        {
+          "id": "ORG-10",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-01",
+        "J-02",
+        "J-03",
+        "J-04",
+        "J-05",
+        "J-06",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-01",
+        "P-02",
+        "P-03",
+        "P-04",
+        "P-05"
+      ],
+      "source_refs": [
+        "project-charter",
+        "roadmap",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "pro-201",
+      "title": "Cryptographic implementation specialization",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-100"
+      ],
+      "estimated_hours": 60,
+      "summary": "Deep practice in target-conscious implementation, benchmarking, refinement, and leakage evidence.",
+      "blocked_by": [
+        "Orange has no typed implementation, proof or refinement, leakage or target, native-artifact, or ABI surface."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-03",
+        "J-04",
+        "J-05",
+        "J-08"
+      ],
+      "roles": [
+        "P-01"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "cap-201",
+      "title": "Cryptographic implementer capstone",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-201"
+      ],
+      "estimated_hours": 100,
+      "pass_percent": 80,
+      "critical_criteria": [
+        "exact standard, source, toolchain, and target identity",
+        "correct implementation with positive, negative, and adversarial evidence",
+        "precise refinement, leakage, performance, and artifact claim boundaries"
+      ],
+      "summary": "Independently deliver and defend a standards-grounded, claim-scoped native cryptographic implementation.",
+      "blocked_by": [
+        "No supported Orange professional release surface exists for a native, artifact-scoped cryptographic implementation."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-01",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-03",
+        "J-04",
+        "J-05",
+        "J-08"
+      ],
+      "roles": [
+        "P-01"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "pro-202",
+      "title": "Verification engineering specialization",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-100"
+      ],
+      "estimated_hours": 60,
+      "summary": "Deep practice in obligations, proof replay, automation boundaries, assumptions, and TCB closure.",
+      "blocked_by": [
+        "Orange has no proof IR, checker, claim boundary, or package and evidence replay surface."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-03",
+        "J-06",
+        "J-08"
+      ],
+      "roles": [
+        "P-02"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "cap-202",
+      "title": "Verification engineer capstone",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-202"
+      ],
+      "estimated_hours": 100,
+      "pass_percent": 80,
+      "critical_criteria": [
+        "complete obligation, assumption, axiom, and trusted-base inventory",
+        "authoritative and independent replay with mutation failures at the correct boundary",
+        "precise separation of checked proof, automation, testing, and external evidence"
+      ],
+      "summary": "Independently prove, replay, mutate, and defend a mixed Orange claim matrix.",
+      "blocked_by": [
+        "No supported Orange professional release surface exists for proof, claim, trust-closure, or independent offline-replay evidence."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-02",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-03",
+        "J-06",
+        "J-08"
+      ],
+      "roles": [
+        "P-02"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "pro-203",
+      "title": "Cryptography and standards specialization",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-100"
+      ],
+      "estimated_hours": 60,
+      "summary": "Deep practice in standards transcription, games, parameters, provenance, and vectors.",
+      "blocked_by": [
+        "Orange has no specification bodies beyond closed literals, games, proofs, admitted cryptography corpus, or package and release surface."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-02",
+        "J-03",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-03"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "cap-203",
+      "title": "Cryptographer and standards author capstone",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-203"
+      ],
+      "estimated_hours": 100,
+      "pass_percent": 80,
+      "critical_criteria": [
+        "exact standards, errata, parameter, and rights provenance",
+        "faithful specification, vector, game, and assumption mapping",
+        "traceable change and withdrawal impact across dependent claims"
+      ],
+      "summary": "Independently translate and defend a standards slice, specification, games, provenance, and vectors.",
+      "blocked_by": [
+        "No supported Orange professional release surface exists for standards-to-specification, game, proof, provenance, and migration evidence."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-03",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-02",
+        "J-03",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-03"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "pro-204",
+      "title": "Library integration and maintenance specialization",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-100"
+      ],
+      "estimated_hours": 60,
+      "summary": "Deep practice in C/Rust integration, misuse resistance, compatibility, dispatch, and updates.",
+      "blocked_by": [
+        "Orange has no typed implementation, native or ABI, package, release, update, or withdrawal surface."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-01",
+        "J-05",
+        "J-06",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-04"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "cap-204",
+      "title": "Library maintainer and integrator capstone",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-204"
+      ],
+      "estimated_hours": 100,
+      "pass_percent": 80,
+      "critical_criteria": [
+        "exact artifact, ABI, target, dispatch, and consumer identity",
+        "misuse-resistant success and fail-closed foreign-boundary behavior",
+        "reproducible release, update, withdrawal, and incident evidence"
+      ],
+      "summary": "Independently integrate, attack-test, release, update, and defend an Orange library boundary.",
+      "blocked_by": [
+        "No supported Orange professional release surface exists for ABI integration, dispatch, packaging, updates, or incident evidence."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-04",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-01",
+        "J-05",
+        "J-06",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-04"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "pro-205",
+      "title": "Audit and downstream assurance specialization",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-100"
+      ],
+      "estimated_hours": 60,
+      "summary": "Deep practice in hostile-bundle inspection, independent replay, artifact tracing, and claim impact.",
+      "blocked_by": [
+        "Orange has no native artifact chain, ABI, evidence bundle, offline replay, release, or incident surface."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-05",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-04",
+        "J-05",
+        "J-06",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-05"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    },
+    {
+      "id": "cap-205",
+      "title": "Auditor and downstream consumer capstone",
+      "stage": "specializations",
+      "status": "blocked",
+      "source_maturity": "proposed",
+      "prerequisites": [
+        "pro-205"
+      ],
+      "estimated_hours": 100,
+      "pass_percent": 80,
+      "critical_criteria": [
+        "hostile-input bundle validation and exact artifact identity",
+        "offline proof, build, test, and trust-closure replay",
+        "precise invalidation, residual-risk, and downstream suitability report"
+      ],
+      "summary": "Independently audit hostile inputs, replay evidence, mutate claims, and defend an exact trust report.",
+      "blocked_by": [
+        "No supported Orange professional release surface exists for hostile-bundle, artifact, trust-closure, replay, or downstream invalidation evidence."
+      ],
+      "competencies": [
+        {
+          "id": "ROLE-05",
+          "coverage": [
+            "instruction",
+            "practice",
+            "assessment"
+          ]
+        }
+      ],
+      "journeys": [
+        "J-04",
+        "J-05",
+        "J-06",
+        "J-07",
+        "J-08"
+      ],
+      "roles": [
+        "P-05"
+      ],
+      "source_refs": [
+        "project-charter",
+        "user-journeys"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "computing-foundations",
+      "title": "Computing foundations",
+      "kind": "core",
+      "status": "released",
+      "roles": [],
+      "modules": [
+        "ori-001",
+        "cmp-101",
+        "cmp-102",
+        "cmp-103"
+      ]
+    },
+    {
+      "id": "programming-foundations",
+      "title": "Programming foundations",
+      "kind": "core",
+      "status": "released",
+      "roles": [],
+      "inherits": "computing-foundations",
+      "modules": [
+        "prg-101",
+        "prg-102",
+        "prg-103",
+        "prg-104"
+      ]
+    },
+    {
+      "id": "mathematics-foundations",
+      "title": "Mathematical foundations",
+      "kind": "core",
+      "status": "released",
+      "roles": [],
+      "inherits": "programming-foundations",
+      "modules": [
+        "mat-101",
+        "mat-102",
+        "mat-103",
+        "mat-104"
+      ]
+    },
+    {
+      "id": "orange-today",
+      "title": "Orange Today sampler",
+      "kind": "sampler",
+      "status": "released",
+      "roles": [],
+      "modules": [
+        "ori-001",
+        "cmp-101",
+        "org-101",
+        "org-102",
+        "org-103"
+      ]
+    },
+    {
+      "id": "professional-core",
+      "title": "Shared zero-to-professional core",
+      "kind": "core",
+      "status": "blocked",
+      "roles": [],
+      "modules": [
+        "ori-001",
+        "cmp-101",
+        "cmp-102",
+        "cmp-103",
+        "prg-101",
+        "prg-102",
+        "prg-103",
+        "prg-104",
+        "mat-101",
+        "mat-102",
+        "mat-103",
+        "mat-104",
+        "cry-101",
+        "cry-102",
+        "cry-103",
+        "cry-104",
+        "sys-101",
+        "sys-102",
+        "sys-103",
+        "sys-104",
+        "sys-105",
+        "plt-101",
+        "plt-102",
+        "plt-103",
+        "frm-101",
+        "frm-102",
+        "frm-103",
+        "frm-104",
+        "ass-101",
+        "ass-102",
+        "ass-103",
+        "ass-104",
+        "org-101",
+        "org-102",
+        "org-103",
+        "org-201",
+        "org-202",
+        "org-301",
+        "org-302",
+        "org-401",
+        "org-402",
+        "org-403",
+        "org-404",
+        "pro-100"
+      ]
+    },
+    {
+      "id": "implementer",
+      "title": "Cryptographic implementer",
+      "kind": "specialization",
+      "status": "blocked",
+      "roles": [
+        "P-01"
+      ],
+      "inherits": "professional-core",
+      "modules": [
+        "pro-201",
+        "cap-201"
+      ],
+      "capstone": "cap-201"
+    },
+    {
+      "id": "verification",
+      "title": "Verification engineer",
+      "kind": "specialization",
+      "status": "blocked",
+      "roles": [
+        "P-02"
+      ],
+      "inherits": "professional-core",
+      "modules": [
+        "pro-202",
+        "cap-202"
+      ],
+      "capstone": "cap-202"
+    },
+    {
+      "id": "standards",
+      "title": "Cryptographer or standards author",
+      "kind": "specialization",
+      "status": "blocked",
+      "roles": [
+        "P-03"
+      ],
+      "inherits": "professional-core",
+      "modules": [
+        "pro-203",
+        "cap-203"
+      ],
+      "capstone": "cap-203"
+    },
+    {
+      "id": "integration",
+      "title": "Library maintainer or integrator",
+      "kind": "specialization",
+      "status": "blocked",
+      "roles": [
+        "P-04"
+      ],
+      "inherits": "professional-core",
+      "modules": [
+        "pro-204",
+        "cap-204"
+      ],
+      "capstone": "cap-204"
+    },
+    {
+      "id": "audit",
+      "title": "Auditor or downstream consumer",
+      "kind": "specialization",
+      "status": "blocked",
+      "roles": [
+        "P-05"
+      ],
+      "inherits": "professional-core",
+      "modules": [
+        "pro-205",
+        "cap-205"
+      ],
+      "capstone": "cap-205"
+    }
+  ]
+}

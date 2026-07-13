@@ -1,0 +1,4 @@
+edition 2026;
+module unsigned {
+  spec impossible() -> Word[8] { -0 }
+}

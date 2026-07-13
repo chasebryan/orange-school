@@ -1,0 +1,4 @@
+ledger::zero: Int = 0
+ledger::debt: Int = -1024
+ledger::low: Word[8] = 0x0a
+ledger::high: Word[8] = 0xff

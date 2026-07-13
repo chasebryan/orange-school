@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "id": "sha256-course-vectors",
+      "path": "vectors/sha256.json",
+      "sha256": "67f5ea0776157133add6d02735f80fb04fde4d63c51fad90f9b46b9908c12bb7",
+      "publisher": "National Institute of Standards and Technology",
+      "source_title": "Course SHA-256 subset traced to exact NIST CAVP and SHA-256 example artifacts",
+      "source_url": "https://csrc.nist.gov/Projects/Cryptographic-Algorithm-Validation-Program/Secure-Hashing",
+      "retrieved": "2026-07-12",
+      "status": "course-maintained transcription for informal verification; not algorithm or module validation"
+    }
+  ]
+}

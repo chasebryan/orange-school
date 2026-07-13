@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "algorithm": "SHA-256",
+  "source": {
+    "publisher": "National Institute of Standards and Technology",
+    "specification": "FIPS 180-4, Secure Hash Standard",
+    "vector_page": "NIST CAVP Secure Hashing test vectors",
+    "url": "https://csrc.nist.gov/Projects/Cryptographic-Algorithm-Validation-Program/Secure-Hashing",
+    "retrieved": "2026-07-12",
+    "scope": "Course-maintained byte-oriented subset transcribed for offline practice; not a CAVP certificate"
+  },
+  "source_artifacts": [
+    {
+      "id": "nist-cavp-sha-byte-archive",
+      "title": "SHA Test Vectors for Hashing Byte-Oriented Messages",
+      "url": "https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Algorithm-Validation-Program/documents/shs/shabytetestvectors.zip",
+      "sha256": "929ef80b7b3418aca026643f6f248815913b60e01741a44bba9e118067f4c9b8",
+      "retrieved": "2026-07-12",
+      "coordinates": "ZIP member shabytetestvectors/SHA256ShortMsg.rsp; member SHA-256 75e1cb83994638481808e225b9eb0c1ebd0c232d952ac42b61abce6363be283c"
+    },
+    {
+      "id": "nist-sha256-example-pdf",
+      "title": "Secure Hash Algorithm - Message Digest Length = 256",
+      "url": "https://csrc.nist.gov/CSRC/media/Projects/Cryptographic-Standards-and-Guidelines/documents/examples/SHA256.pdf",
+      "sha256": "7006b6549dad2fc8c6f29417a921f2e48208157ef496a7e1e1d7d17c5cc1e7db",
+      "retrieved": "2026-07-12",
+      "coordinates": "Six-page NIST example document; one-block and two-block message samples"
+    }
+  ],
+  "vectors": [
+    {
+      "id": "sha256-empty",
+      "message_hex": "",
+      "digest_hex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_artifact_id": "nist-cavp-sha-byte-archive",
+      "source_location": "shabytetestvectors/SHA256ShortMsg.rsp; [L = 32], Len = 0"
+    },
+    {
+      "id": "sha256-abc",
+      "message_hex": "616263",
+      "digest_hex": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+      "source_artifact_id": "nist-sha256-example-pdf",
+      "source_location": "PDF pages 1 through 3; One Block Message Sample, input abc and final Message Digest"
+    },
+    {
+      "id": "sha256-two-block-example",
+      "message_hex": "6162636462636465636465666465666765666768666768696768696a68696a6b696a6b6c6a6b6c6d6b6c6d6e6c6d6e6f6d6e6f706e6f7071",
+      "digest_hex": "248d6a61d20638b8e5c026930c3e6039a33ce45964ff2167f6ecedd419db06c1",
+      "source_artifact_id": "nist-sha256-example-pdf",
+      "source_location": "PDF pages 3 through 6; Two Block Message Sample and final Message Digest"
+    }
+  ]
+}

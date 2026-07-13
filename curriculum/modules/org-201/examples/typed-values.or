@@ -1,0 +1,10 @@
+edition 2026;
+module ledger {
+  spec shared() {}
+  impl shared() {}
+  spec zero() -> Int { -0x0 }
+  spec debt() -> Int { -1_024 }
+  spec low() -> Word[8] { 0b0000_1010 }
+  impl placeholder() {}
+  spec high() -> Word[8] { 255 }
+}

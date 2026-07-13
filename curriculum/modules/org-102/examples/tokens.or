@@ -1,0 +1,5 @@
+module Identifier {
+  /* outer /* inner */ comment */
+  claim value = 0x2a;
+  "ok\n" ..
+}

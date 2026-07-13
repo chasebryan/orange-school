@@ -1,0 +1,48 @@
+name: Curriculum checks
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  merge_group:
+    types:
+      - checks_requested
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: curriculum-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Curriculum graph, content, tests, and examples
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Orange School
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Checkout the pinned Orange source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          repository: chasebryan/orange
+          ref: ee0fa66d3d38af5e8e10adaa67555b1f0cebc6f6
+          path: .orange-source
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Run all curriculum gates
+        run: make ORANGE_REPO=.orange-source check

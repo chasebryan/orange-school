@@ -1,0 +1,4 @@
+edition 2026;
+module reserved_declaration {
+  proof rejected() {}
+}

@@ -1,0 +1,6 @@
+edition 2026;
+module bounded {
+  spec before() -> Int { 42 }
+  spec too_large() -> Word[8] { 256 }
+  spec after() -> Int { 7 }
+}
