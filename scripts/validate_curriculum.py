@@ -525,8 +525,17 @@ def validate_catalog(
         revision = catalog.get("orange_source", {}).get("revision")
         if not workflow.is_file():
             errors.append("missing .github/workflows/ci.yml")
-        elif isinstance(revision, str) and revision not in workflow.read_text(encoding="utf-8"):
-            errors.append("CI workflow does not pin the catalog Orange revision")
+        else:
+            workflow_text = workflow.read_text(encoding="utf-8")
+            if isinstance(revision, str) and revision not in workflow_text:
+                errors.append("CI workflow does not pin the catalog Orange revision")
+            rust_toolchain = catalog.get("host_validation_envelope", {}).get(
+                "rust_toolchain"
+            )
+            if isinstance(rust_toolchain, str) and (
+                f"rustup toolchain install {rust_toolchain}" not in workflow_text
+            ):
+                errors.append("CI workflow does not install the catalog Rust toolchain")
     return errors
 
 

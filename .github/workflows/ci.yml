@@ -44,5 +44,8 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
+      - name: Install the pinned Rust toolchain
+        run: rustup toolchain install 1.96.1 --profile minimal --component clippy,rustfmt
+
       - name: Run all curriculum gates
         run: make ORANGE_REPO=.orange-source check

@@ -149,6 +149,13 @@ class CurriculumValidationTests(unittest.TestCase):
         errors = self.validate(catalog, materials=True)
         self.assertIn("docs/current-status.md does not match catalog curriculum version", errors)
 
+    def test_material_validation_confirms_ci_toolchain_install(self) -> None:
+        self.assertEqual(self.validate(self.catalog, materials=True), [])
+        workflow = (ROOT / ".github" / "workflows" / "ci.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("rustup toolchain install 1.96.1", workflow)
+
     def test_track_cannot_omit_a_module_prerequisite(self) -> None:
         catalog = copy.deepcopy(self.catalog)
         track = next(item for item in catalog["tracks"] if item["id"] == "orange-today")
